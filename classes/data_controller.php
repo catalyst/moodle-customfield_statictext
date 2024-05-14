@@ -42,8 +42,7 @@ class data_controller extends \core_customfield\data_controller {
         $field = $this->get_field();
         $config = $field->get('configdata');
         $text = $config['defaultvalue']['text'];
-        // Got array conversion notice here, so I added the (string) cast.
-        $elementname = $this->get_form_element_name() . " ";
+        $elementname = $this->get_form_element_name();
         $label = $config['showlabel'] ? $this->get_field()->get_formatted_name() : '';
         $mform->addElement('static', $elementname, $label, $text);
     }
@@ -54,6 +53,6 @@ class data_controller extends \core_customfield\data_controller {
      * @return mixed
      */
     public function get_default_value() {
-        return $this->get_field()->get_configdata_property('defaultvalue');
+        return $this->get_field()->get_configdata_property('defaultvalue')['text'];
     }
 }

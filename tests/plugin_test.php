@@ -40,9 +40,10 @@ class plugin_test extends \advanced_testcase {
 
         $this->cfcat = $this->get_generator()->create_category();
 
+        // The default value is an array with a text key, as the same data save by editor.
         $this->cfields[1] = $this->get_generator()->create_field(
             ['categoryid' => $this->cfcat->get('id'), 'shortname' => 'myfield1', 'type' => 'statictext',
-                'configdata' => ['defaultvalue' => "<h1>This is a static text field 1.</h1>"]]);
+                'configdata' => ['defaultvalue' => ['text' => "<h1>This is a static text field 1.</h1>"]]]);
 
         // There is no instance data for this field.
         // Create a user to test with.
@@ -96,6 +97,7 @@ class plugin_test extends \advanced_testcase {
         // Field without data.
         $d = \core_customfield\data_controller::create(0, null, $this->cfields[1]);
         $this->assertEquals('<h1>This is a static text field 1.</h1>', $d->get_value());
+        $this->assertEquals('<h1>This is a static text field 1.</h1>', $d->get_default_value());
         $this->assertEquals('<div class="text_to_html"><h1>This is a static text field 1.</h1></div>',
             $d->export_value());
     }
