@@ -23,6 +23,7 @@ use core_privacy\local\request\writer;
 /**
  * Privacy Subsystem for customfield_statictext implementing null_provider.
  *
+ * @package   customfield_statictext
  * @copyright  2024 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

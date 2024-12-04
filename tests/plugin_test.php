@@ -24,6 +24,8 @@ use core_customfield_generator;
  * @package   customfield_statictext
  * @copyright 2024 Catalyst IT
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *
+ * @covers \customfield_statictext\data_controller
  */
 class plugin_test extends \advanced_testcase {
     /** @var \core_customfield\category_controller */

@@ -1,3 +1,5 @@
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/catalyst/moodle-customfield_statictext/ci.yml?branch=MOODLE_401_STABLE)
+
 # Custom field "Static text"
 
 Allows to configure a static text as a custom field. 
@@ -6,7 +8,7 @@ Allows to configure a static text as a custom field.
 
 | Moodle version | Branch |
 |----------------|--------|
-| Moodle 4.1+    | main   |
+| Moodle 4.1+    | MOODLE_401_STABLE   |
 
 # Installation
 
