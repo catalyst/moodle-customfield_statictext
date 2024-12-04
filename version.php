@@ -28,5 +28,5 @@ $plugin->component = 'customfield_statictext';
 $plugin->release   = 2024051300;
 $plugin->version   = 2024051300;
 $plugin->requires  = 2022111800;
+$plugin->maturity  = MATURITY_STABLE;
 $plugin->supported = [401, 405];
-$plugin->maturity = MATURITY_STABLE;
