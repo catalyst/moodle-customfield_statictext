@@ -43,7 +43,7 @@ class data_controller extends \core_customfield\data_controller {
         $config = $field->get('configdata');
         $text = $config['defaultvalue']['text'];
         $elementname = $this->get_form_element_name();
-        $label = $config['showlabel'] ? $this->get_field()->get_formatted_name() : '';
+        $label = $this->get_field()->get_formatted_name();
         $mform->addElement('static', $elementname, $label, $text);
     }
 

@@ -79,4 +79,18 @@ class field_controller extends \core_customfield\field_controller {
             $this->get_formatted_name());
         return $ret;
     }
+
+    /**
+     * Return the name of the field where the information is stored
+     *
+     * @return string
+     */
+    public function get_formatted_name() : string {
+        $config = $this->get('configdata');
+        // Return empty string if we don't want to show label.
+        if ($config['showlabel'] == 0) {
+            return '';
+        }
+        return parent::get_formatted_name();
+    }
 }
